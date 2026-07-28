@@ -373,6 +373,7 @@
 #
 #
 #==========================================================Collections in Python=======================================
+#==========================================Tuples in python=====================================
 a=(1,2,3,[1,2,3,4],4,5,6,7,3,2,5,2,4,2)
 # print(a.count(2))
 # print(a.index(4))
@@ -394,4 +395,43 @@ a=(1,2,3,[1,2,3,4],4,5,6,7,3,2,5,2,4,2)
 # print(student.Name)
 # print(student.Age)
 # print(student.Department)
+
+#===========================================Sets In python======================================
+#set dont have dublicate values-it delete dublicate values automatically
+# set={2,3,4,5,6}
+# set2={1,2,3,0,9,7,8}
+# set.add(8)
+# set.update([1,9])#it store the valuse in accending order
+# set.remove(9)
+# set.discard(8)
+# set.pop()#it remove the first value
+# set.clear()#it empty the set
+# print(set)
+
+#=====================================Dictionay in Python==========================================
+dic={"name":"kumaran","age":21,"dep":"CSE"}
+# print(dic.get("name"))#Accessing the dictionary safe method
+# dic["age"]=22#change the value
+# dic.update({"name":"Tamil","age":"23"})#change the bulk value
+#===============================removing=================
+# del dic["age"]
+# dic.pop("name")
+# dic.clear()#empty dictionary
+#==============================itration in dictionay===========
+# for keys in dic:
+#     print(keys,end=" ")#For print the keys in the Dictionary
+# print()
+
+# for value in dic.values():#for print the values onyly
+#     print(value,end=" ")
+# print()
+#=================iterate using index=====================
+# for index,(key,value) in enumerate(dic.items()):
+#     print(index,key,value)
+#==================iterate reverse order==================
+# for key in reversed(list(dic.keys())):
+#     print(key,":",dic[key])
+#=================access values usng keys===================
+for key in dic:
+    print(f"{key}->{dic[key]}")
 
