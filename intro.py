@@ -344,7 +344,7 @@
 # print(result)
 #
 #
-#=====================SUM OF DIGITE=====================
+#======================SUM OF DIGITE=====================
 #
 # def digit(num):
 #     string=str(num)
@@ -369,3 +369,29 @@
 #         return 1
 #     return n*fact(n-1)
 # print(fact(4))
+#
+#
+#
+#==========================================================Collections in Python=======================================
+a=(1,2,3,[1,2,3,4],4,5,6,7,3,2,5,2,4,2)
+# print(a.count(2))
+# print(a.index(4))
+# a[3].append(5)
+# z,b,c,*d=a   #Unpacking in Tuples
+
+#============================================Named Tuples=======================================
+# data=("Kumaran",21,"CSE")
+# from collections import namedtuple
+# st=namedtuple("st",["Name","Age","Department"])
+# student=st("Kumaran",21,"CSE")
+# makedata=st._make(data)#Make As a Data
+# dic=student._asdict()#For converting the tuple to dictionary
+# rep=student._replace(Age=22)#Replace the value By Field
+# print(student._fields)
+# print(rep)
+# print(dic)
+# print(student)
+# print(student.Name)
+# print(student.Age)
+# print(student.Department)
+
