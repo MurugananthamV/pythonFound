@@ -78,5 +78,77 @@
 #
 #==================LMBDA FUNCTION
 #
-age=lambda dob:2026-dob
-print(age(2005))
+# age=lambda dob:2026-dob
+# print(age(2005))
+#
+#
+#================================HIGHER ORDER FUNCTION+=================================
+#==========USE FUNCTIONS AS A ARGUMENT==================================================
+# def add(a):
+#     a=a+a
+#     return a
+# def new(add,value):
+#     return add(value)
+# print(new(add,20))
+#
+#
+#============BUILT IN HIGHER ORDER FUNCTION==============
+#
+#
+#
+# lis=[1,2,3,4,5,6,7,8,9,10]
+# #       
+# sq=list(map(lambda x:x**2,lis))
+# #
+# ev=list(filter(lambda x:x%2==0,lis))
+# #
+# from functools import reduce
+# total = reduce(lambda a,b:a+b,lis)
+# print(sq)
+# print(ev)
+# print(total)
+#
+#
+#==================Return function==============
+# def outer(mul):
+#     def inner(num):
+#         return num*mul
+#     return inner
+# a=outer(2)
+# b=outer(5)
+# print(a(5))
+# print(b(5))
+#
+#
+#========================BANK BALANCE MANAGEMENT SMALL ROGRAMM ========================
+#USING nonlocal to mofdify enclosing function variable
+#Using Closure.
+# def bank(balance):
+#     def dep(amount):
+#         nonlocal balance
+#         balance=amount+balance
+#         return balance
+#     def wit(amount):
+#         nonlocal balance
+#         if balance<amount:
+#             return "innuficient balance"
+#         balance=balance-amount
+#         return balance
+#     return dep,wit
+# deposite,withdraw=bank(1500)
+# print(deposite(240))
+# print(withdraw(570))
+#
+#==========================DECORATORS==================================================
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Before the function runs")
+        result = func(*args, **kwargs)
+        print("After the function runs")
+        return result
+    return wrapper
+@my_decorator
+def say_hello(name):
+    print(f"Hello, {name}!")
+
+say_hello("Ravi")
