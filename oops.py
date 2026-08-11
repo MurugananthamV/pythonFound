@@ -98,9 +98,9 @@
 # print(car3)
 
 # #
-#
-#=====================PRINT THE OBJECT==========================
-#=======STRING REPRESENTATION __srt__,__repr__===================
+
+# =====================PRINT THE OBJECT==========================
+# =======STRING REPRESENTATION __srt__,__repr__===================
 # class cars:
 #     def __init__(self,name,model,power,id):
 #         self.name=name
@@ -122,7 +122,7 @@
 
 # print(car1)
 # print(repr(car3))
-#
+
 #
 #
 #
@@ -133,32 +133,36 @@
 #
 #
 #Alternative Constructor
-class student:
-    def __init__(self,name,id,dep):
-        self.name=name
-        self.id=id
-        self.dep=dep
-    @classmethod#CLASS METHOD
-    def string(cls,data):
-        name,id,dep=data.split("-")
-        return cls(name,id,dep)
-    def changename(self):#INSTANCE METHOD
-        self.name=input("Enter name:")
-        self.id=input("enter your id:")
-        self.dep=input("enter your dep:")
-    def __str__(self):
-        return f"""
-        Student Name : {self.name}
-        ID No        : {self.id}
-        Department   : {self.dep}
-"""
-    @staticmethod
-    def result(a,b,c,d,e):
-        t=a+b+c+d+e
-        r=t/5
-        return r
+# class student:
+#     def __init__(self,name,id,dep):
+#         self.name=name
+#         self.id=id
+#         self.dep=dep
+#     @classmethod#CLASS METHOD
+#     def string(cls,data):
+#         name,id,dep=data.split("-")
+#         return cls(name,id,dep)
+#     def changename(self):#INSTANCE METHOD
+#         self.name=input("Enter name:")
+#         self.id=input("enter your id:")
+#         self.dep=input("enter your dep:")
+#     def __str__(self):
+#         return f"""
+#         Student Name : {self.name}
+#         ID No        : {self.id}
+#         Department   : {self.dep}
+# """
+#     @staticmethod
+#     def result(a,b,c,d,e):
+#         t=a+b+c+d+e
+#         r=t/5
+#         return r
 
 
+s=student.string("Muruganantham-066-CSE")
+# s.changename()
+print(student.result(87,67,90,80,60))
+print(s)
 s=student.string("Muruganantham-066-CSE")
 # s.changename()
 print(student.result(87,67,90,80,60))
