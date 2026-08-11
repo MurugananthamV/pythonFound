@@ -159,10 +159,10 @@
 #         return r
 
 
-# s=student.string("Muruganantham-066-CSE")
-# # s.changename()
-# print(student.result(87,67,90,80,60))
-# print(s)
+s=student.string("Muruganantham-066-CSE")
+# s.changename()
+print(student.result(87,67,90,80,60))
+print(s)
 s=student.string("Muruganantham-066-CSE")
 # s.changename()
 print(student.result(87,67,90,80,60))
