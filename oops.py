@@ -167,4 +167,55 @@
 #
 #
 #
+##
 #
+#
+#========================================================INHERITANCE IN PYTHON======================================
+class animal:
+    def __init__(self,name,sound=""):
+        self.name=name
+        self.sound=sound
+    def prin(self):
+        print(f"{self.name} sounds like {self.sound}")
+class dog(animal):
+    def __init__(self,name,sound=""):
+        super().__init__(name,sound)
+        self.tricks=[]
+    def learn_trick(self,trick):
+        self.tricks.append(trick)
+d=dog("Appu","bow bow")
+d.prin()
+d.learn_trick("roll over")
+print(d.tricks)
+
+#==========================Hyprid inheritance========================
+
+class livingthing:
+    def __init__(self,name,date):
+        super().___init__()
+
+class human(livingthing):
+    def __init__(self,hname,age):
+        super().__init__(hname,age)
+
+class dog(livingthing):
+    def __init__(self,dname,breed):
+        super().__init__(dname,breed)
+
+    
+       
+class cat(livingthing):
+    def __init__(self,cname,colore):
+        super().__init__(cname,colore)
+
+
+class home(livinthign):
+    def __init__(self,):
+        self.Home=Home
+
+l=livingthing
+h=human("naresh",19)
+d=dog("Appu","Sippi")
+c=cat("kitty","Wight and black")
+love=home("kumaran house")
+print(love)
